@@ -23,6 +23,7 @@
     },
     "dependencies": {
         "bootstrap-icons": "^1.7.1",
+        "cleave.js": "^1.6.0",
         "materialize-css": "^1.0.0-rc.2"
     }
 }

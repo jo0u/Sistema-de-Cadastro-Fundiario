@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/requerentes/dashboard',[RequerenteController::class, 'dashboard']);
 Route::get('/requerentes/cadastrar',[RequerenteController::class, 'create']);
-
+Route::post('/requerente',[RequerenteController::class,'store']);
 
 Route::get('/home', function () {
     

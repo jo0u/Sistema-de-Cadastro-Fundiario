@@ -1,4 +1,2 @@
-$(".dropdown-content").dropdown();
-
 
 

@@ -10,6 +10,14 @@
 <div class="card-panel">
 <br><br><table border="1px"><tbody><tr> <th> Requerente </th> <th> Pessoa </th><th> CPF </th> <th>Est.Civil</th>  <th> Ações </th></tr>
 
+@foreach($requerente as $r)
+
+<tr> <th> {{$r->nome}} </th> <th> {{$r->pessoa}} </th><th> {{$r->cpf}} </th> <th>{{$r->estado_civil}}</th>  <th> <button>Editar</button> <button>Excluir</button> </th></tr>
+
+@endforeach
+
+
+
 
 </tr></tbody></table>
     </div>
