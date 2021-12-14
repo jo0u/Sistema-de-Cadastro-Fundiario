@@ -12,7 +12,19 @@
 
 @foreach($requerente as $r)
 
-<tr> <th> {{$r->nome}} </th> <th> {{$r->pessoa}} </th><th> {{$r->cpf}} </th> <th>{{$r->estado_civil}}</th>  <th> <button>Editar</button> <button>Excluir</button> </th></tr>
+<tr> <th> {{$r->nome}} </th> <th> {{$r->pessoa}} </th><th> {{$r->cpf}} </th> <th>{{$r->estado_civil}}</th>  <th> <button> <a href="/requerentes/{{$r->id}}">Ver</a>
+</button> <a href="/requerentes/edit/{{$r->id}}"> <button>Editar</button> </a>
+
+
+<form action="/requerentes/{{$r->id}}" method="POST">
+@csrf
+@method('DELETE')
+
+<button type="submit" class="btn btn-danger delete-btn"><ion-icon name="trash-outline"></ion-icon></button>
+
+</form>
+
+</th></tr>
 
 @endforeach
 

@@ -21,6 +21,7 @@
 <!-- Compiled and minified JavaScript -->
 
 
+
 <!--Mascara bootstrap-->
 
 <!--------------------------------------------------------------------------------------------------->
@@ -85,9 +86,9 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#">Projetos</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Comunidades</a>
+          <a class="dropdown-item" href="/comunidades/dashboard">Comunidades</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Municipio</a>
+          <a class="dropdown-item" href="/municipios/dashboard">Municipio</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Procurador</a>
           <div class="dropdown-divider"></div>
@@ -176,7 +177,9 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
    
 
-
+<script>
+  $('.toast').toast(option)
+</script>
 
 
 

@@ -5,13 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Requerente extends Model
+class Municipios extends Model
 {
     use HasFactory;
 
-
-
-    protected $dates = ['data_nascimento'];
-
+    
     protected $guarded = [];
+
 }
