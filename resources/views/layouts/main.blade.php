@@ -16,7 +16,7 @@
        <link rel="stylesheet" href="/css/styles.css">
         <!-- JS Da aplicação-->
          <!-- Compiled and minified CSS -->
-    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <!-- Compiled and minified JavaScript -->
 

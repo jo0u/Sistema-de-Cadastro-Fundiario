@@ -7,7 +7,7 @@
     @method('PUT')
 
 <div class="container ">
-    <h2>Cadastro de Requerente</h2>
+    <h2>Edição de Requerente</h2>
   <div class="row">
      <div> <label>CPF</div>
     <div class="col"><input type="text" id="cpfz" name="cpf" class="form-control" maxlength="14" required value="{{$requerentes->cpf}}" ></div>

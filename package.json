@@ -22,6 +22,7 @@
         "tailwindcss": "^2.0.2"
     },
     "dependencies": {
+        "bootstrap-autocomplete": "^2.3.7",
         "bootstrap-icons": "^1.7.1",
         "cleave.js": "^1.6.0",
         "materialize-css": "^1.0.0-rc.2"

@@ -13,19 +13,20 @@ class MuncipioController extends Controller
         if($search):
           
             $municipios = Municipios::where([
-                ['nome_municipio' , 'like',$search]
+                ['nome_municipio' , 'like',"%".ucfirst($search)."%"]
             ])->get();
         else:
-            $municipios = Municipios::all();
+             $municipios = Municipios::all();
         endif;
         
            
        
-       
+     
 
         return view('municipios.dashboard',['municipios' => $municipios]);
     }
 
+  
 
     public function create(){
 
@@ -63,6 +64,24 @@ class MuncipioController extends Controller
 
 
         return view('municipios.show',['municipios' => $municipios]);
+
+    }
+
+    public function edit($id){
+        $municipios = Municipios::findOrFail($id);
+
+      return view('municipios.edit',['municipios' => $municipios]);
+    }
+
+    public function update(Request $request){
+
+        Municipios::findOrFail($request->id)->update($request->all());
+
+
+
+        return redirect('/municipios/dashboard')->with('msg','Municipio editado com sucesso!');
+
+
 
     }
 
