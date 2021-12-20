@@ -34,6 +34,7 @@ Route::put('/requerentes/update/{id}',[RequerenteController::class,'update'])->m
 Route::get('/comunidades/dashboard',[ComunidadeController::class,'dashboard'])->middleware('auth');
 Route::get('/comunidades/cadastrar',[ComunidadeController::class,'create'])->middleware('auth');
 Route::post('/comunidades',[ComunidadeController::class,'store'])->middleware('auth');
+Route::post('/comunidades',[MuncipioController::class,'store'])->middleware('auth');
 
 /***********************************************************************************************************/
 

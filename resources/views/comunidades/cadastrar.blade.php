@@ -19,8 +19,12 @@
 
 
     <select name="municipio" id="municipio" style="width:100%; height:35px;">
-    <option value="" disabled="" selected="">Selecione o Municipio *CHAVE ESTRANGEIRA*</option>
+    <option value="" disabled="" selected="">Selecione o Municipio</option>
    
+
+    @foreach($municipios as $m)
+    <option value="">{{$m->nome_municipio}}</option>
+   @endforeach
 
 </select>
     </div>
@@ -50,7 +54,7 @@
     <label for="">Responsável da CDA</label>
     <br><br>
     <input type="text" class="form-control" id="responsavel_cda" name="responsavel_cda" placeholder="Nome do responsável da CDA" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
-<button type="submit" name="cadastrar" class="btn btn-success" style="margin-bottom:20px;">Cadastrar</button>    
+    <button type="submit" name="cadastrar" class="btn btn-success" style="margin-bottom: 10px;">Cadastrar</button> 
     
 </div>
     

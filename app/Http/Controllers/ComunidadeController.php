@@ -17,32 +17,32 @@ class ComunidadeController extends Controller
     public function create(){
 
         
-        
+        $municipios = Municipios::all();
 
 
-        return view('comunidades.cadastrar');
+        return view('comunidades.cadastrar',['municipios' => $municipios]);
     }
 
     public function store(Request $request){
 
-        
         $comunidades = Comunidades::all();
-        $municipios = Municipios::where('id', $comunidades->mucipios_id)->first()->toArray();
 
-        $comunidades->municipios_id = $municipios->id;
+        $comunidades = new Comunidades;
 
-        return view('comunidades.cadastrar',['comunidades' => $comunidades]);
+ //       $comunidades-> = $request-> ;
+        $comunidades->nome_comunidade = $request->nome_comunidade ;
+        $comunidades->distrito_sede = $request->distrito_sede ;
+        $comunidades->responsavel = $request->responsavel ;
+        $comunidades->responsavel_cda = $request->responsavel_cda ;
+       
+
+        $comunidades->save();
+
+       
+
+        return redirect('comunidades.dashboard',['comunidades' => $comunidades ])->with('msg','Comunidade criada com sucesso!');
 
     }
 
-
-    public function show($id){
-        $comunidades = Comunidades::all();
-        $municipios = Municipios::where('id', $comunidades->mucipios_id)->first()->toArray();
-
-        $comunidades->municipios_id = $municipios->id;
-
-        return view('comunidades.cadastrar',['comunidades' => $comunidades, 'municipios' => $municipios]);
-    }
 
 }

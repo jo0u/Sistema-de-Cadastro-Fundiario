@@ -12,11 +12,21 @@ class Comunidades extends Model
     use HasFactory;
     protected $guarded = [];
 
-    public function comunidade(){
+    protected $fillable = [
+        'nome_comunidade',
+        'distrito_sede',
+        'responsavel',
+        'responsavel_cda',
+        'municipios_id',
 
-        return $this->belongsTo('App\Models\Municipios');
+    ];
 
+
+
+    public function municipios(){
+
+
+        return $this->belongsTo(Municipios::class);
     }
-
 
 }

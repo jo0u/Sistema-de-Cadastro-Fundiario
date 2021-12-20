@@ -8,6 +8,9 @@ class MuncipioController extends Controller
 {
     public function dashboard(){
 
+      
+
+
         $search = request('search');
 
         if($search):
@@ -59,13 +62,13 @@ class MuncipioController extends Controller
         }
 
 
-    public function show($id){
-        $municipios = Municipios::findOrFail($id);
+    // public function show($id){
+    //     $municipios = Municipios::findOrFail($id);
 
 
-        return view('municipios.show',['municipios' => $municipios]);
+    //     return view('municipios.show',['municipios' => $municipios]);
 
-    }
+    // }
 
     public function edit($id){
         $municipios = Municipios::findOrFail($id);

@@ -14,7 +14,10 @@ class AddMunicipiosIdToComunidadesTable extends Migration
     public function up()
     {
         Schema::table('comunidades', function (Blueprint $table) {
-            $table->foreignId('muncipios_id')->constrained();
+        
+            $table->unsignedBigInteger('municipios_id');
+            $table->foreign('municipios_id')->references('id')->on('municipios');
+
         });
     }
 
@@ -26,9 +29,7 @@ class AddMunicipiosIdToComunidadesTable extends Migration
     public function down()
     {
         Schema::table('comunidades', function (Blueprint $table) {
-            $table->foreignId('muncipios_id')
-            ->constrained()
-            ->onDelete('cascade');
+            //
         });
     }
 }

@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>@yield('title')</title>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
          <!-- Fonte do Google-->
          <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
@@ -16,8 +16,8 @@
        <link rel="stylesheet" href="/css/styles.css">
         <!-- JS Da aplicação-->
          <!-- Compiled and minified CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js" rel="stylesheet"> -->
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
 <!-- Compiled and minified JavaScript -->
 
 

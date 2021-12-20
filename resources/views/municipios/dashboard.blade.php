@@ -4,6 +4,7 @@
 
 <h2>Painel de Controle de Municipios</h2>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
 <i class="bi bi-plus-circle-dotted"></i>
 
 
@@ -45,7 +46,14 @@
 
 
 </tr></tbody></table>
-    </div>
+<br>
 
+</div>
+
+
+
+  
+  
 
 @endsection
+
