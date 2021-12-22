@@ -4,7 +4,7 @@
 
 
 <form action="/municipios" method="POST">
-    @csrf
+@csrf
     
     
     

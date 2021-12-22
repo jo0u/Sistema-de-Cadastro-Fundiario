@@ -29,18 +29,15 @@ class ComunidadeController extends Controller
 
         $comunidades = new Comunidades;
 
- //       $comunidades-> = $request-> ;
+        $comunidades->municipios_id = $request->municipios_id ;
         $comunidades->nome_comunidade = $request->nome_comunidade ;
-        $comunidades->distrito_sede = $request->distrito_sede ;
-        $comunidades->responsavel = $request->responsavel ;
-        $comunidades->responsavel_cda = $request->responsavel_cda ;
        
 
         $comunidades->save();
 
        
 
-        return redirect('comunidades.dashboard',['comunidades' => $comunidades ])->with('msg','Comunidade criada com sucesso!');
+        return redirect('/comunidades/dashboard')->with('msg','Comunidade criada com sucesso!');
 
     }
 

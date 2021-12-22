@@ -44,106 +44,90 @@
 
   
     
- 
-<nav class="navbar navbar-expand-lg navbar-light ">
-  <a class="navbar-brand" href="/">SCF</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-    
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Cadastro
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Processo</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="/requerentes/dashboard">Requerente</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Domínio Municipal</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Confrontante</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Processos SEI</a>
-</div>
-
-<li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Protesto
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Controle de Protesto</a>
-</div>
 
 
-<li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Tabelas
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Projetos</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="/comunidades/dashboard">Comunidades</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="/municipios/dashboard">Municipio</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Procurador</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Pendências</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Executor</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Funcionários</a>
-</div>
+    <link rel="stylesheet" href="/css/menu.css">
+
+<nav class="navbar navbar-expand-lg navbar-light "  id="menu">
+        <div class="container-fluid" id="color-menu">
+          <a class="navbar-brand" href="/">SCF</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Cadastro</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Processo</a></li>
+                  <li><a class="dropdown-item" href="/requerentes/dashboard">Requerente</a></li>
+                  <li><a class="dropdown-item" href="#">Domínio Municipal</a></li>
+                  <li><a class="dropdown-item" href="#">Confrotante</a></li>
+                  <li><a class="dropdown-item" href="#">Processo SEI</a></li>
+                </ul>
 
 
-          <li class="nav-item">
-        <a class="nav-link" href="#">Consultas</a>
-      </li>
-
-
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Tabelas
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Produção</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Gerencias</a>
-</div>
-
-          <li class="nav-item">
-        <a class="nav-link" href="#">Status</a>
-      </li>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          @auth
-        <li class="nav-item">
-           <form action="/logout" method="POST">
+                <li class="nav-item dropdown">
+                <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Protesto</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Controle de Protesto</a></li>
+                </ul>
+                <li class="nav-item dropdown">
+                <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tabelas</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Projetos</a></li>
+                    <li><a class="dropdown-item" href="/comunidades/dashboard">Comunidades</a></li>
+                    <li><a class="dropdown-item" href="/municipios/dashboard">Municipio</a></li>
+                    <li><a class="dropdown-item" href="#">Procurador</a></li>
+                    <li><a class="dropdown-item" href="#">Pendências</a></li>
+                    <li><a class="dropdown-item" href="#">Executor</a></li>
+                    <li><a class="dropdown-item" href="#">Funcionários</a></li>
+                </ul>
+                <li class="nav-item dropdown">
+                <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Consultas</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Tabelas</a></li>
+                    <li><a class="dropdown-item" href="#">Produção</a></li>
+                    <li><a class="dropdown-item" href="#">Gerencias</a></li>
+                </ul>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Status</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        @auth
+        <ul class="nav av-link">
+            <li class="nav-item">
+            <form action="/logout" method="POST">
             @csrf
-            <a href="/logout" class="nav-link" onclick="event.preventDefault(); this.closest('form').submit();">Sair</a>
+            <a href="/logout" class="nav-link" id="logout" onclick="event.preventDefault(); this.closest('form').submit();">Sair</a>
+            </li>
+            </form>
+      </nav>
+      @endauth
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
-           </form>
-        </li>
-        @endauth
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
       
 </nav>
 

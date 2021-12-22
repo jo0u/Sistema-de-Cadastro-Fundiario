@@ -38,7 +38,13 @@
 
 
 
+<form action="/municipios/{{$m->id}}" method="POST">
+@csrf
+@method('DELETE')
 
+<button type="submit" class="btn btn-dark"><ion-icon name="trash-outline"></ion-icon></button>
+
+</form>
 
 @endforeach
 

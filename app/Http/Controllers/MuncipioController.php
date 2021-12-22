@@ -21,10 +21,6 @@ class MuncipioController extends Controller
         else:
              $municipios = Municipios::all();
         endif;
-        
-           
-       
-     
 
         return view('municipios.dashboard',['municipios' => $municipios]);
     }
@@ -85,6 +81,13 @@ class MuncipioController extends Controller
         return redirect('/municipios/dashboard')->with('msg','Municipio editado com sucesso!');
 
 
+
+    }
+
+    public function destroy($id){
+        Municipios::findOrFail($id)->delete();
+
+        return redirect('/municipios/dashboard')->with('msg','Muncipios deletado com sucesso!');
 
     }
 

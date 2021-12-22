@@ -18,12 +18,12 @@
 
 
 
-    <select name="municipio" id="municipio" style="width:100%; height:35px;">
+    <select name="municipios_id" id="municipios_id" style="width:100%; height:35px;">
     <option value="" disabled="" selected="">Selecione o Municipio</option>
    
 
     @foreach($municipios as $m)
-    <option value="">{{$m->nome_municipio}}</option>
+    <option value="{{$m->id}}">{{$m->nome_municipio}}</option>
    @endforeach
 
 </select>
@@ -35,27 +35,10 @@
     
     </div>
   </div>
-  <div class="row">
-     
-    <div class="col">
-        <br><br>
-    <label for="">Distrito Sede</label>
-    <br><br>
-    <input type="text" class="form-control" id="distrito_sede" name="distrito_sede" placeholder="Digite o número do distrito sede" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
-    </div>
-    <div class="col">
-    <br><br>
-    <label for="">Responsável</label>
-    <br><br>
-    <input type="text" class="form-control" id="responsavel" name="responsavel" placeholder="Nome responsável pela comunidade" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
-    </div>
-    <div class="col">
-    <br><br>
-    <label for="">Responsável da CDA</label>
-    <br><br>
-    <input type="text" class="form-control" id="responsavel_cda" name="responsavel_cda" placeholder="Nome do responsável da CDA" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
-    <button type="submit" name="cadastrar" class="btn btn-success" style="margin-bottom: 10px;">Cadastrar</button> 
+
     
+    <button type="submit" name="cadastrar" class="btn btn-success" style="margin-bottom: 10px;">Cadastrar</button> 
+    </div>
 </div>
     
   </div>
