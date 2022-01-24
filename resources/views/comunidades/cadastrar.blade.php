@@ -38,7 +38,7 @@
 
     
     <button type="submit" name="cadastrar" class="btn btn-success" style="margin-bottom: 10px;">Cadastrar</button> 
-    </div>
+    
 </div>
     
   </div>

@@ -9,7 +9,21 @@ class ComunidadeController extends Controller
 {
     public function dashboard(){
 
-        $comunidades = Comunidades::all();
+        $search = request('search');
+
+        if($search):
+            $comunidades = Comunidades::where([
+                ['nome_comunidade' , 'like' , "%".strtoupper($search)."%"]
+            ])->get();
+            else:
+                $comunidades = Comunidades::all();
+            endif;
+
+
+
+
+
+        $comunidades = Comunidades::paginate(100);
 
         return view('comunidades.dashboard',['comunidades' => $comunidades]);
     }
@@ -31,6 +45,9 @@ class ComunidadeController extends Controller
 
         $comunidades->municipios_id = $request->municipios_id ;
         $comunidades->nome_comunidade = $request->nome_comunidade ;
+        $comunidades->distrito_sede = $request->distrito_sede ;
+        $comunidades->responsavel = $request->responsavel ;
+        $comunidades->responsavel_cda = $request->responsavel_cda ;
        
 
         $comunidades->save();
@@ -41,5 +58,12 @@ class ComunidadeController extends Controller
 
     }
 
+    public function edit($id){
+        $comunidades = Comunidades::findOrFail($id);
+
+        $municipios = Municipios::all();
+
+        return view('comunidades.edit',['comunidades' => $comunidades , 'municipios' => $municipios]);
+    }
 
 }

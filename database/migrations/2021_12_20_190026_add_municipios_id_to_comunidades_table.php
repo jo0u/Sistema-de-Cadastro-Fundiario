@@ -16,7 +16,7 @@ class AddMunicipiosIdToComunidadesTable extends Migration
         Schema::table('comunidades', function (Blueprint $table) {
         
             $table->unsignedBigInteger('municipios_id');
-            $table->foreign('municipios_id')->references('id')->on('municipios');
+            $table->foreign('municipios_id')->references('geocodigo')->on('municipios');
 
         });
     }

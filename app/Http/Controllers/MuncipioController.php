@@ -84,6 +84,8 @@ class MuncipioController extends Controller
 
     }
 
+   
+
     public function destroy($id){
         Municipios::findOrFail($id)->delete();
 

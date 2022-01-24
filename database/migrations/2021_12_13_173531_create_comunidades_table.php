@@ -16,9 +16,6 @@ class CreateComunidadesTable extends Migration
         Schema::create('comunidades', function (Blueprint $table) {
             $table->id();
             $table->string('nome_comunidade');
-            $table->string('distrito_sede');
-            $table->string('responsavel');
-            $table->string('responsavel_cda');
             $table->timestamps();
         });
     }
