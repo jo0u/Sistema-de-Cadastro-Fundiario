@@ -3,6 +3,7 @@
 use App\Http\Controllers\ComunidadeController;
 use App\Http\Controllers\RequerenteController;
 use App\Http\Controllers\MuncipioController;
+use App\Http\Controllers\ProjetoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -54,8 +55,17 @@ Route::put('/municipios/update/{id}',[MuncipioController::class,'update'])->midd
 /**********************************************************************************************************/
 
 
+/*****************************************  Rotas Projetos **********************************************/
+Route::get('/projetos/dashboard',[ProjetoController::class,'dashboard'])->middleware('auth');
+Route::get('/projetos/cadastrar',[ProjetoController::class,'create'])->middleware('auth');
+Route::post('/projetos',[ProjetoController::class,'store'])->middleware('auth');
+Route::get('/projetos/{id}',[ProjetoController::class,'show'])->middleware('auth');
+Route::get('/projetos/edit/{id}',[ProjetoController::class,'edit'])->middleware('auth');
+Route::put('/projetos/update/{id}',[ProjetoController::class,'update'])->middleware('auth');
+Route::delete('/projetos/{id}',[ProjetoController::class,'destroy'])->middleware('auth');
 
 
+/**********************************************************************************************************/
 
 Route::get('/home', function () {
     

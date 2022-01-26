@@ -32,8 +32,8 @@
 
 
 
-<tr> <th> {{$c->municipios->nome_municipio}} </th> <th> {{$c->nome_comunidade}} </th><th> <th> <button> <a href="">Ver</a>
-</button> <a href="/comunidades/edit/{{$c->id}}"> <button>Editar</button> </a>
+<tr> <th> {{$c->municipios->nome_municipio}} </th> <th> {{$c->nome_comunidade}} </th><th> <th> 
+ <a href="/comunidades/edit/{{$c->id}}"> <button>Editar</button> </a>
 
 
 @endforeach
