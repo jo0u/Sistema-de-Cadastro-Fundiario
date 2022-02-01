@@ -32,8 +32,7 @@
         <br><br>
     <input type="text" class="form-control" id="descricao" placeholder="Digite uma descrição sobre o projeto" name="descricao" aria-label="Sizing example input"
      aria-describedby="inputGroup-sizing-sm" required value="{{$projetos->descricao}}">
-     <button type="submit" class="btn btn-danger delete-btn"><ion-icon name="trash-outline"></ion-icon></button>
-    
+ 
     </div>
   </div>
   <br>

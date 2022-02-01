@@ -3,7 +3,9 @@
 use App\Http\Controllers\ComunidadeController;
 use App\Http\Controllers\RequerenteController;
 use App\Http\Controllers\MuncipioController;
+use App\Http\Controllers\ProcuradorController;
 use App\Http\Controllers\ProjetoController;
+use App\Models\Procuradores;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -67,6 +69,23 @@ Route::delete('/projetos/{id}',[ProjetoController::class,'destroy'])->middleware
 
 /**********************************************************************************************************/
 
+
+
+
+
+
+
+
+/*************************************** Rotas Procuradores ************************************************/
+Route::get('/procuradores/dashboard',[ProcuradorController::class,'dashboard'])->middleware('auth');
+Route::get('/procuradores/cadastrar',[ProcuradorController::class,'create'])->middleware('auth');
+Route::post('/procuradores',[ProcuradorController::class,'store'])->middleware('auth');
+Route::get('/procuradores/{id}',[ProcuradorController::class,'show'])->middleware('auth');
+Route::get('/procuradores/edit/{id}',[ProcuradorController::class,'edit'])->middleware('auth');
+Route::put('/procuradores/update/{id}',[ProcuradorController::class,'update'])->middleware('auth');
+Route::delete('/procuradores/{id}',[ProcuradorController::class,'destroy'])->middleware('auth');
+
+/********************************************************************************************************/
 Route::get('/home', function () {
     
     return view('welcome');

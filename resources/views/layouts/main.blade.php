@@ -78,7 +78,7 @@
                     <li><a class="dropdown-item" href="/projetos/dashboard">Projetos</a></li>
                     <li><a class="dropdown-item" href="/comunidades/dashboard">Comunidades</a></li>
                     <li><a class="dropdown-item" href="/municipios/dashboard">Municipio</a></li>
-                    <li><a class="dropdown-item" href="#">Procurador</a></li>
+                    <li><a class="dropdown-item" href="/procuradores/dashboard">Procurador</a></li>
                     <li><a class="dropdown-item" href="#">Pendências</a></li>
                     <li><a class="dropdown-item" href="#">Executor</a></li>
                     <li><a class="dropdown-item" href="#">Funcionários</a></li>
