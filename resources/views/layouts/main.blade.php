@@ -80,7 +80,7 @@
                     <li><a class="dropdown-item" href="/municipios/dashboard">Municipio</a></li>
                     <li><a class="dropdown-item" href="/procuradores/dashboard">Procurador</a></li>
                     <li><a class="dropdown-item" href="#">Pendências</a></li>
-                    <li><a class="dropdown-item" href="#">Executor</a></li>
+                    <li><a class="dropdown-item" href="/executadores/dashboard">Executor</a></li>
                     <li><a class="dropdown-item" href="#">Funcionários</a></li>
                 </ul>
                 <li class="nav-item dropdown">

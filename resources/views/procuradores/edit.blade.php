@@ -9,7 +9,7 @@
     
     
 <div class="container card" style="top: 20%;">
-<h2>Cadastro de Procurador</h2>
+<h2>Edição de Procurador</h2>
   <div class="row">
    
         <br><br>

@@ -22,8 +22,8 @@
     <div class="col">
 
 
-     <select class="form-select form-select-sm" id="pessoa" name="pessoa" aria-label=".form-select-sm example" required>
-     <option selected disabled="">Pessoa</option>
+    <select class="form-select form-select-sm" id="pessoa" name="pessoa" aria-label=".form-select-sm example" required>
+     <option selected="" disabled="">Pessoa</option>
         <option value="F">Fisica</option>
         <option value="J">Juridico</option>
      

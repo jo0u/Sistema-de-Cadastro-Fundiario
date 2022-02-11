@@ -7,17 +7,6 @@
 
 
 
-<form action="/comunidades/dashboard" method="GET">
-
-<label for="exampleDataList" class="form-label">Pesquisar</label>
-<input class="form-control" list="datalistOptions" id="search" name="search" placeholder="Pesquise o nome do municipio">
-<datalist id="datalistOptions">
-    @foreach($comunidades as $c)
-  <option value="{{$c->nome_comunidade}}">
-  @endforeach
-  
-</datalist>
-</form>
 
 
 

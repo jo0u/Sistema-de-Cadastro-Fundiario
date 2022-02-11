@@ -12,18 +12,16 @@ class ComunidadeController extends Controller
         $search = request('search');
 
         if($search):
+
             $comunidades = Comunidades::where([
-                ['nome_comunidade' , 'like' , "%".strtoupper($search)."%"]
+                ['nome_comunidade','like',"%".($search)."%"]
             ])->get();
             else:
                 $comunidades = Comunidades::all();
             endif;
+      
 
-
-
-
-
-        $comunidades = Comunidades::paginate(100);
+            $comunidades = Comunidades::paginate(100);
 
         return view('comunidades.dashboard',['comunidades' => $comunidades]);
     }

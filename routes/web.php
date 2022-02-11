@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ComunidadeController;
+use App\Http\Controllers\ExecutorController;
 use App\Http\Controllers\RequerenteController;
 use App\Http\Controllers\MuncipioController;
 use App\Http\Controllers\ProcuradorController;
@@ -86,6 +87,25 @@ Route::put('/procuradores/update/{id}',[ProcuradorController::class,'update'])->
 Route::delete('/procuradores/{id}',[ProcuradorController::class,'destroy'])->middleware('auth');
 
 /********************************************************************************************************/
+
+
+
+/************************************** Rotas Executores *************************************************/
+
+Route::get('/executadores/dashboard',[ExecutorController::class,'dashboard'])->middleware('auth');
+Route::get('/executadores/cadastrar',[ExecutorController::class,'create'])->middleware('auth');
+Route::post('/executadores',[ExecutorController::class,'store'])->middleware('auth');
+Route::get('/executadores/{id}',[ExecutorController::class,'show'])->middleware('auth');
+Route::get('/executadores/edit/{id}',[ExecutorController::class,'edit'])->middleware('auth');
+Route::put('/executadores/update/{id}',[ExecutorController::class,'update'])->middleware('auth');
+Route::delete('/executadores/{id}',[ExecutorController::class,'destroy'])->middleware('auth');
+
+
+
+
+
+
+
 Route::get('/home', function () {
     
     return view('welcome');
