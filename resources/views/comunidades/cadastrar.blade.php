@@ -19,7 +19,7 @@
 
 
     <select name="municipios_id" id="municipios_id" style="width:100%; height:35px;">
-    <option value="" disabled="" selected="">Selecione o Municipio</option>
+    <option value="" disabled="true" selected="">Selecione o Municipio</option>
    
 
     @foreach($municipios as $m)

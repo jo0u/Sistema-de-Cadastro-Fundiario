@@ -15,7 +15,7 @@
     <h2>Cadastro de Requerente</h2>
   <div class="row">
      <div> <label>CPF</div>
-    <div class="col"><input type="text" id="cpfz" name="cpf" class="form-control" maxlength="14" required ></div>
+    <div class="col"><input type="text" id="cpfz" name="cpf" class="form-control" maxlength="14" required autofocus ></div>
    
    
    
@@ -113,7 +113,7 @@
     <div class="w-100"></div>
 <div class="col"> 
 <label for="">Telefone</label>    
-<input type="text" class="form-control" id="telefone" name="telefone" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required></div>
+<input type="text" class="form-control" id="telefone" name="telefone" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required autofocus></div>
     <div class="col">
     
     <div class="col"><label for="">Email</label>    
@@ -209,13 +209,15 @@
 </div>
 
 
-<button type="submit" name="cadastrar" class="btn btn-success">Cadastrar</button>
+<button type="submit" name="cadastrar" class="btn btn-success" onclick='return validadata()'>Cadastrar</button>
 
 
 
 </form>
 
 <script >
+
+
      function getSelectValue(){
         var setSelectValue = document.getElementById("list").value;
            if((setSelectValue === "Casado") ){
@@ -233,12 +235,40 @@
 
     }
 
-
-$("#telefone").mask("(99) 99999-9999");
+  
+    $("#telefone").mask("(99) 99999-9999");
 
 $("#cpfz").mask("999.999.999-99");
 
 
+function validadata(){
+   var data = document.getElementById("data_nascimento").value; // pega o valor do input
+   data = data.replace(/\//g, "-"); // substitui eventuais barras (ex. IE) "/" por hífen "-"
+   var data_array = data.split("-"); // quebra a data em array
+   
+   // para o IE onde será inserido no formato dd/MM/yyyy
+   if(data_array[0].length != 4){
+      data = data_array[2]+"-"+data_array[1]+"-"+data_array[0]; // remonto a data no formato yyyy/MM/dd
+   }
+   
+   // comparo as datas e calculo a idade
+   var hoje = new Date();
+   var nasc  = new Date(data);
+   var idade = hoje.getFullYear() - nasc.getFullYear();
+   var m = hoje.getMonth() - nasc.getMonth();
+   if (m < 0 || (m === 0 && hoje.getDate() < nasc.getDate())) idade--;
+   
+   if(idade < 18){
+      alert("Pessoas menores de 18 não podem se cadastrar.");
+      return false;
+   }
+
+   if(idade >= 18 && idade <= 60){
+      alert("Cadastro efetuado com sucesso!.");
+      return true;
+   }
+
+}
 </script>
 
 
