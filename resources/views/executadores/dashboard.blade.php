@@ -7,6 +7,27 @@
 
 <i class="bi bi-plus-circle-dotted"></i>
 
+<form action="/executadores/dashboard" method="GET">
+   
+
+<!--<input type="text" id="search" name="search" class="form-control" placeholder="Pesquisa rápida">-->
+
+<label for="exampleDataList" class="form-label">Pesquisar</label>
+<input class="form-control" list="datalistOptions" id="search" name="search" placeholder="Pesquise o nome do municipio">
+<datalist id="datalistOptions">
+    @foreach($executadores as $e)
+  <option value="{{$e->nome_executor}}">
+  @endforeach
+  
+</datalist>
+ 
+
+</form>
+
+
+
+
+
 <br>
 <a href="/executadores/cadastrar" class="btn-floating btn-large waves-effect waves-light green" style="margin-left:50px;"><i class="material-icons" >add</i></a>
  

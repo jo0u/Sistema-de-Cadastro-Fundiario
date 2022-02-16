@@ -10,9 +10,16 @@ class ExecutorController extends Controller
     public function dashboard(){
 
         $executadores = Executores::all();
-           
+        
+        $search = request('search');
 
+        if($search):
 
+            $executadores = Executores::where([
+                ['nome_executor','like',"%".($search)."%"]
+            ])->get();
+
+            endif;
 
 
         return view('executadores.dashboard',['executadores' => $executadores]);
