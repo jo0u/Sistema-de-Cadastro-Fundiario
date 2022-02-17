@@ -9,7 +9,22 @@ class ProjetoController extends Controller
 {
     public function dashboard(){
 
-        $projetos = Projetos::all();
+
+
+
+        $search = request('search');
+
+        if($search):
+            $projetos = Projetos::where([
+                ['codigo', 'like',"%".($search)."%"]
+            ])->get();
+            
+            else:
+                $projetos = Projetos::all();
+            endif;
+
+
+        
 
         return view('/projetos/dashboard',['projetos' => $projetos]);
     }

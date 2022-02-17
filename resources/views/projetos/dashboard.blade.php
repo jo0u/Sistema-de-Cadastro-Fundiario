@@ -4,8 +4,31 @@
 
 <h2>Painel de Controle de Projetos</h2>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+<form action="/projetos/dashboard" method="GET">
+   
+
+<!--<input type="text" id="search" name="search" class="form-control" placeholder="Pesquisa rápida">-->
+
+<label for="exampleDataList" class="form-label">Pesquisar</label>
+<input class="form-control" list="datalistOptions" id="search" name="search" placeholder="Pesquise o nome do projeto">
+<datalist id="datalistOptions">
+    @foreach($projetos as $p)
+  <option value="{{$p->codigo}}">
+  @endforeach
+  
+</datalist>
+ 
+
+</form>
+
 <i class="bi bi-plus-circle-dotted"></i>
 <a href="/projetos/cadastrar" class="btn-floating btn-large waves-effect waves-light green" style="margin-left:50px;"><i class="material-icons" >add</i></a>
+
+
+
+
+
 
 <div class="card-panel">
 <br><br><table border="1px"><tbody><tr> <th> Código </th> <th> Descrição </th><th> Ações </th></tr>
