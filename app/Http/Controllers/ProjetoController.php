@@ -23,6 +23,7 @@ class ProjetoController extends Controller
                 $projetos = Projetos::all();
             endif;
 
+            
 
         
 

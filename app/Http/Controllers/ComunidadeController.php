@@ -10,20 +10,23 @@ class ComunidadeController extends Controller
     public function dashboard(){
 
         $search = request('search');
+        
+            if($search):
+                $comunidades = Comunidades::where([
+                    ['nome_comunidade', 'like',"%".($search)."%"]
+                ])->get();
+                else:
+                   
+                    $comunidades = Comunidades::paginate(100);
+                endif;
 
-        if($search):
-
-            $comunidades = Comunidades::where([
-                ['nome_comunidade','like',"%".($search)."%"]
-            ])->get();
-            else:
-                $comunidades = Comunidades::all();
-            endif;
+                
+                
       
 
-            $comunidades = Comunidades::paginate(100);
+           
 
-        return view('comunidades.dashboard',['comunidades' => $comunidades]);
+        return view('/comunidades/dashboard',['comunidades' => $comunidades]);
     }
 
     public function create(){

@@ -6,7 +6,22 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
 
+<form action="/comunidades/dashboard" method="GET">
+   
 
+<!--<input type="text" id="search" name="search" class="form-control" placeholder="Pesquisa rápida">-->
+
+<label for="exampleDataList" class="form-label">Pesquisar</label>
+<input class="form-control" list="datalistOptions" id="search" name="search" placeholder="Pesquise o nome do Comunidade">
+<datalist id="datalistOptions">
+    @foreach($comunidades as $comu)
+  <option value="{{$comu->nome_comunidade}}">
+  @endforeach
+  
+</datalist>
+ 
+
+</form>
 
 
 
@@ -37,11 +52,28 @@
 </tr></tbody></table>
 
 
-    <div>
-    <nav aria-label="Page navigation example">
-  <ul class="pagination">
+    <div id="c">
+    <nav aria-label="Page navigation example" id="co">
+  <ul class="pagination" id="col">
     <li class="page-item">  {{ $comunidades->links() }}</li>
 </nav>
 </div>
+
+
+<style>
+  .w-5{
+    display: none;
+    
+  }
+ 
+  nav{
+    color:aliceblue;
+    background-color: green;
+
+  }
+ 
+
+</style>
+
 
 @endsection
