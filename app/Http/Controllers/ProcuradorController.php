@@ -8,10 +8,21 @@ class ProcuradorController extends Controller
 {
     public function dashboard(){
 
+
+        $search = request('search');
+
+        if($search):
+
+            $procuradores = Procuradores::where([
+                ['nome','like',"%".($search)."%"]
+            ])->get();
+            else:
+
        $procuradores = Procuradores::all();
 
+            endif;
 
-        return view('/procuradores/dashboard',['procuradores' => $procuradores]);
+        return view('procuradores.dashboard',['procuradores' => $procuradores]);
 
     }
 

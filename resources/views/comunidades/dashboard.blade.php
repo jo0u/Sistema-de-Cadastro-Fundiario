@@ -4,9 +4,11 @@
 
 <h2>Painel de Controle de Comunidade</h2>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
 
-<form action="/comunidades/dashboard" method="GET">
+<form action="/comunidades/show" method="GET">
    
 
 <!--<input type="text" id="search" name="search" class="form-control" placeholder="Pesquisa rápida">-->
@@ -25,9 +27,12 @@
 
 
 
-
 <i class="bi bi-plus-circle-dotted"></i>
 <a href="/comunidades/cadastrar" class="btn-floating btn-large waves-effect waves-light green" style="margin-left:50px;"><i class="material-icons" >add</i></a>
+
+
+<a href="/comunidades/show" class="btn-floating btn-large waves-effect waves-white green" style="margin-left:50px;"><i class="material-icons">search</i></a>
+
 
 <div class="card-panel">
 <br><br><table border="1px"><tbody><tr> <th> Municipio </th> <th> Nome da Comunidade </th><th> <th>Ações </th></tr>

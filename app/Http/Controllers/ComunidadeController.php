@@ -11,14 +11,16 @@ class ComunidadeController extends Controller
 
         $search = request('search');
         
-            if($search):
-                $comunidades = Comunidades::where([
-                    ['nome_comunidade', 'like',"%".($search)."%"]
-                ])->get();
-                else:
+        if($search):
+            $comunidades = Comunidades::where([
+                ['nome_comunidade', 'like',"%".($search)."%"]
+            ])->get();
+            else:
+                $comunidades = Comunidades::all();
+            endif;
                    
                     $comunidades = Comunidades::paginate(100);
-                endif;
+                
 
                 
                 
@@ -27,6 +29,20 @@ class ComunidadeController extends Controller
            
 
         return view('/comunidades/dashboard',['comunidades' => $comunidades]);
+    }
+
+
+    public function show(){
+        $search = request('search');
+        
+        if($search):
+            $comunidades = Comunidades::where([
+                ['nome_comunidade', 'like',"%".($search)."%"]
+            ])->get();
+            else:
+                $comunidades = Comunidades::all();
+            endif;
+        return view('comunidades.show',['comunidades' => $comunidades]);
     }
 
     public function create(){

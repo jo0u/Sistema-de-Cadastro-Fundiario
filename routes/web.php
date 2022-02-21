@@ -38,7 +38,7 @@ Route::put('/requerentes/update/{id}',[RequerenteController::class,'update'])->m
 Route::get('/comunidades/dashboard',[ComunidadeController::class,'dashboard'])->middleware('auth');
 Route::get('/comunidades/cadastrar',[ComunidadeController::class,'create'])->middleware('auth');
 Route::post('/comunidades',[ComunidadeController::class,'store'])->middleware('auth');
-Route::get('/comunidades/{id}',[ComunidadeController::class, 'show'])->middleware('auth');
+Route::get('/comunidades/show',[ComunidadeController::class, 'show'])->middleware('auth');
 Route::get('/comunidades/edit/{id}',[ComunidadeController::class,'edit'])->middleware('auth');
 Route::delete('/comunidades/{id}',[ComunidadeController::class, 'destroy'])->middleware('auth');
 Route::put('/comunidades/update/{id}',[ComunidadeController::class, 'update'])->middleware('auth');
