@@ -13,7 +13,7 @@
 <!--<input type="text" id="search" name="search" class="form-control" placeholder="Pesquisa rápida">-->
 
 <label for="exampleDataList" class="form-label">Pesquisar</label>
-<input class="form-control" list="datalistOptions" id="search" name="search" placeholder="Pesquise o nome do municipio">
+<input class="form-control" list="datalistOptions" id="search" name="search" placeholder="Pesquise o nome do executor">
 <datalist id="datalistOptions">
     @foreach($executadores as $e)
   <option value="{{$e->nome_executor}}">

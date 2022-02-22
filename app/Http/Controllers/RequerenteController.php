@@ -10,7 +10,25 @@ class RequerenteController extends Controller
 {
     public function dashboard(){
 
-        $requerente = Requerente::all();
+        
+
+        $search = request('search');
+
+        if($search):
+
+            $requerente = Requerente::where([
+                ['cpf','like',"%".($search)."%"]
+            ])->get();
+
+            else:
+                $requerente = Requerente::all();
+
+            endif;
+
+
+        
+
+
 
         return view('requerentes.dashboard',['requerente' => $requerente]);
     }
