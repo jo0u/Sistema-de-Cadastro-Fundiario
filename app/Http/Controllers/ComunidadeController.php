@@ -20,14 +20,6 @@ class ComunidadeController extends Controller
             endif;
                    
                     $comunidades = Comunidades::paginate(100);
-                
-
-                
-                
-      
-
-           
-
         return view('/comunidades/dashboard',['comunidades' => $comunidades]);
     }
 
@@ -62,9 +54,7 @@ class ComunidadeController extends Controller
 
         $comunidades->municipios_id = $request->municipios_id ;
         $comunidades->nome_comunidade = $request->nome_comunidade ;
-        $comunidades->distrito_sede = $request->distrito_sede ;
-        $comunidades->responsavel = $request->responsavel ;
-        $comunidades->responsavel_cda = $request->responsavel_cda ;
+        
        
 
         $comunidades->save();

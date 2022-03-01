@@ -59,7 +59,7 @@
               <li class="nav-item dropdown">
                 <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Cadastro</a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Processo</a></li>
+                  <li><a class="dropdown-item" href="/processos/dashboard">Processo</a></li>
                   <li><a class="dropdown-item" href="/requerentes/dashboard">Requerente</a></li>
                   <li><a class="dropdown-item" href="#">Domínio Municipal</a></li>
                   <li><a class="dropdown-item" href="#">Confrotante</a></li>
@@ -91,8 +91,9 @@
                     <li><a class="dropdown-item" href="#">Gerencias</a></li>
                 </ul>
                 <li class="nav-item dropdown">
-                    <a class="nav-link active " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Status</a>
-              </li>
+                    <a class="nav-link active " href="/status/dashboard" id="navbarDropdown" role="button"  aria-expanded="false">Status</a>
+                   
+                  </li>
             </ul>
           </div>
         </div>

@@ -6,6 +6,10 @@ use App\Http\Controllers\RequerenteController;
 use App\Http\Controllers\MuncipioController;
 use App\Http\Controllers\ProcuradorController;
 use App\Http\Controllers\ProjetoController;
+use App\Http\Controllers\ProcessoController;
+use App\Http\Controllers\StatusController;
+
+
 use App\Models\Procuradores;
 use Illuminate\Support\Facades\Route;
 
@@ -99,6 +103,49 @@ Route::get('/executadores/{id}',[ExecutorController::class,'show'])->middleware(
 Route::get('/executadores/edit/{id}',[ExecutorController::class,'edit'])->middleware('auth');
 Route::put('/executadores/update/{id}',[ExecutorController::class,'update'])->middleware('auth');
 Route::delete('/executadores/{id}',[ExecutorController::class,'destroy'])->middleware('auth');
+
+
+
+/*********************************************************************************************************/
+
+
+
+/******************************************** Rotas Situação *******************************************/
+
+Route::get('/situacao/dashboard',[StatusController::class, 'dashboard'])->middleware('auth');
+Route::get('/situacao/cadastrar',[StatusController::class, 'create'])->middleware('auth');
+Route::post('/situacao',[StatusController::class, 'store'])->middleware('auth');
+
+
+
+
+
+/********************************************************************************************************/
+
+
+
+
+
+
+
+/******************************************** Rotas Processos *******************************************/
+
+Route::get('/processos/dashboard',[ProcessoController::class, 'dashboard'])->middleware('auth');
+Route::get('/processos/cadastrar',[ProcessoController::class, 'create'])->middleware('auth');
+Route::post('/processos',[ProcessoController::class, 'store'])->middleware('auth');
+
+
+
+
+
+/********************************************************************************************************/
+
+
+
+
+
+
+
 
 
 
