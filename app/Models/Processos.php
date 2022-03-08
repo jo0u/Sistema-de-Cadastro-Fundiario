@@ -11,27 +11,47 @@ class Processos extends Model
     protected $guarded = [];
 
 
+    protected $fillable = [
+        'cod_processo',
+        'requerente_id ',
+        'municipio_id ',
+        'comunidade_id ',
+        'data_ocupacao',
+        'data_requerimento',
+        'denominacao',
+        'cultura',
+        'executor_id',
+        'observacoes',
+        'situacao_id ',
 
-    public function requerentes(){
+    ];
+
+    protected $casts = [
+        'data_ocupacao' => 'datetime',
+        'data_requerimento' => 'datetime',
+    ];
+
+
+    public function requerente(){
 
         return $this->belongsTo(Requerente::class);
     }
 
 
-    public function municipios(){
-        return $this->belongsTo(Municipio::class);
+    public function municipio(){
+        return $this->belongsTo(Municipios::class);
     }
 
     public function comunidades(){
-        return $this->belongsTo(Comunidade::class);
+        return $this->belongsTo(Comunidades::class);
     }
 
-    public function executores(){
-        return $this->belongsTo(Executor::class);
+    public function executor(){
+        return $this->belongsTo(Executores::class);
     }
 
     public function situacao(){
-        return $this->belongsTo(Situacao::class);
+        return $this->belongsTo(Situacoes::class);
     }
 
 

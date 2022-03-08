@@ -15,8 +15,8 @@ class CreateProcessosTable extends Migration
     {
         Schema::create('processos', function (Blueprint $table) {
             $table->id();
-            $table->integer('cod_processo');
-            $table->unsignedBigInteger('requerente_id');
+            $table->integer('cod_processo')->unique();
+            $table->unsignedBigInteger('requerente_id')->unique();
             $table->foreign('requerente_id')->references('id')->on('requerentes');
             $table->unsignedInteger('municipio_id');
             $table->foreign('municipio_id')->references('id')->on('municipios');
@@ -28,7 +28,7 @@ class CreateProcessosTable extends Migration
             $table->string('cultura');
             $table->unsignedBigInteger('executor_id');
             $table->foreign('executor_id')->references('id')->on('executores');
-            $table->mediumText('observacoes');
+            $table->mediumText('observacoes')->nullable();
             $table->unsignedBigInteger('situacao_id');
             $table->foreign('situacao_id')->references('id')->on('situacoes');
             

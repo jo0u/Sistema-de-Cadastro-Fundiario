@@ -3,7 +3,7 @@
 @section('content')
 
 
-<form action="/comunidades" method="POST">
+<form action="/comunidades" method="POST" >
     @csrf
     
     

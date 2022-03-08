@@ -8,11 +8,22 @@ use App\Models\Comunidades;
 use App\Models\Executores;
 use App\Models\Situacoes;
 use Illuminate\Http\Request;
-use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
+
 
 class ProcessoController extends Controller
 {
+
+
+    
+
     public function dashboard(){
+    
+        $requerentes = Requerente::all();
+        $municipios = Municipios::all();
+        $comunidades = Comunidades::all();
+        $executores = Executores::all();
+        $situacoes = Situacoes::all();
+
         $search = request ('search');
 
         if($search):
@@ -24,7 +35,7 @@ class ProcessoController extends Controller
                 $processos = Processos::all();
         endif;
         
-        return view('/processos/dashboard',['processos' => $processos]);
+        return view('processos.dashboard',['processos' => $processos]);
     }
 
 
@@ -40,13 +51,16 @@ class ProcessoController extends Controller
          $situacoes = Situacoes::all();
 
 
+        
 
-         return view('processos.cadastrar',['requerentes' => $requerentes],
-         ['municipios' => $municipios],
-         ['comunidades' => $comunidades],
-         ['executadores' => $executores],
-        ['situacoes' => $situacoes]
-    );
+
+
+         return view('processos.cadastrar',['requerentes' => $requerentes,
+         'municipios' => $municipios,
+        'comunidades' => $comunidades,
+         'executores' => $executores,
+        'situacoes' => $situacoes
+        ]);
     }
 
     public function store(Request $request){
@@ -58,21 +72,34 @@ class ProcessoController extends Controller
 
         $processos->cod_processo = $request->cod_processo;
         $processos->requerente_id = $request->requerente_id;
+
+
+
         $processos->municipio_id = $request->municipio_id;
+        
+        
+        
         $processos->comunidade_id = $request->comunidade_id;
+
+
+
+
+
+
+
+
         $processos->data_ocupacao = $request->data_ocupacao;
         $processos->data_requerimento = $request->data_requerimento;
         $processos->denominacao = $request->denominacao;
         $processos->cultura = $request->cultura;
         $processos->executor_id = $request->executor_id;
         $processos->observacoes = $request->observacoes;
-        $processos->status_id = $request->status_id;
+        $processos->situacao_id = $request->situacao_id;
        
         $processos->save();
 
 
-        return redirect('/processos/dashboard')->witth('msg','Processo Criado com sucesso!');
-
+        return redirect('/processos/dashboard');
     }
    
 
