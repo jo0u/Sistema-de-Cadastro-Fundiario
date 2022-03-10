@@ -8,7 +8,7 @@ use App\Models\Comunidades;
 use App\Models\Executores;
 use App\Models\Situacoes;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\DB;
 
 class ProcessoController extends Controller
 {
@@ -45,15 +45,12 @@ class ProcessoController extends Controller
     public function create(){
 
          $requerentes = Requerente::all();
-         $municipios = Municipios::all();
-         $comunidades = Comunidades::all();
+        $municipios = Municipios::all();
+        $comunidades = Comunidades::all();
          $executores = Executores::all();
          $situacoes = Situacoes::all();
 
-
         
-
-
 
          return view('processos.cadastrar',['requerentes' => $requerentes,
          'municipios' => $municipios,
@@ -102,5 +99,40 @@ class ProcessoController extends Controller
         return redirect('/processos/dashboard');
     }
    
+
+
+
+    // public $selectMunicipio = null,
+    //         $selectComunidade = null;
+
+    //         public $municipios = null;
+    //         public $comunidades = null;
+
+
+    // public function teste(){
+
+       
+       
+       
+       
+       
+    //     return view('processos/teste',[
+           
+            
+
+    //     ]);
+    // }
+
+
+    public function updatedselectMunicipio($municipios_id){
+
+        $this->comunidades = Comunidades::where('municipios_id',$municipios_id)->get();
+
+
+        return ['comunidades' => $this->comunidades];
+
+    }
+
+    
 
 }

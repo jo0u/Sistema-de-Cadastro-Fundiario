@@ -29,7 +29,7 @@
 
 
 
-        
+       
        <script src="/js/scripts.js"></script>
    
        
@@ -37,6 +37,7 @@
     </head>
     <body >
     
+    @livewireScripts
     
            
     
