@@ -25,7 +25,7 @@
 
 <br>
 <i class="bi bi-plus-circle-dotted"></i>
-<a href="/processos/cadastrar" class="btn-floating btn-large waves-effect waves-light green" style="margin-left:50px;"><i class="material-icons" >add</i></a>
+<a href="/livewire/proc-controller" class="btn-floating btn-large waves-effect waves-light green" style="margin-left:50px;"><i class="material-icons" >add</i></a>
 
 
 

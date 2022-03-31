@@ -9,6 +9,7 @@ use App\Http\Controllers\ProjetoController;
 use App\Http\Controllers\ProcessoController;
 use App\Http\Controllers\StatusController;
 use App\Http\Livewire\{
+    ProcController,
     TesteController
 };
 use App\Models\Procuradores;
@@ -147,7 +148,7 @@ Route::post('/processos',[ProcessoController::class, 'store'])->middleware('auth
 
 
 Route::get('/livewire/teste',TesteController::class,'render')->middleware('auth');
-
+Route::get('/livewire/proc-controller',ProcController::class,'render')->middleware('auth');
 
 
 
