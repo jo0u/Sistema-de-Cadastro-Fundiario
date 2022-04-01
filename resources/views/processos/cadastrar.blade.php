@@ -3,7 +3,7 @@
 @section('content')
 
 
-<form action="/processos" method="POST">
+<form method="POST" wire:submit.prevent="create">
 @csrf
 
 <div class="container card" style="top: 20%;">

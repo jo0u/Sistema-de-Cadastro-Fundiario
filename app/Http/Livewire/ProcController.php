@@ -33,7 +33,7 @@ class ProcController extends Component
             'situacao' => Situacoes::all(),
             'processos' => Processos::all()
     
-    ]);
+    ]); 
     }
 
     public function updatedselectedMunicipio($municipios_id){
@@ -44,6 +44,10 @@ class ProcController extends Component
     }
 
     public function create(){
+            Processos::create([
+                
+
+            ]);
 
     }
 }

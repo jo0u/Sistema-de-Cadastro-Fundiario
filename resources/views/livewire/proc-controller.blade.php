@@ -6,11 +6,13 @@
 
 <div class="card">
   <div class="card-body">
-
+<form action="">
 <div class="row">
   <div class="col">
+  <form  method="POST" wire:submit.prevent="create">
+
   <label for="">Codígo de Processo: </label><br>
-     <input id="cod_processo" name="cod_processo" type="text" wire:model="" autofocus/>
+     <input id="cod_processo" name="cod_processo" type="text" wire:model="processos" autofocus maxlength="6" minlength="6"/>
   </div>
   <div class="col"><label>Municipios</label>
             <select wire:model="selectedMunicipio" class="form-control">
@@ -79,53 +81,30 @@
 
   <div class="row">
   <div class="col-6 col-sm-3">
-
-  
+<br>
+  <label style="margin-left:120px;">Executor</label>
   <br>
     
     <select name="executor_id" id="executor_id" style="width: 550px; margin-left: 120px;">
-    <option disabled selected>Selecione o Executor do processo</option>
 
 @foreach ($executor as $e)
 
 <option value="{{$e->id}}">{{$e->nome_executor}}</option>
 
 @endforeach
-    </select>
-
+    
+</select>
   </div>
   <div class="col-6 col-sm-3">
     <br>
+  <label style="margin-left:450px;">Situação</label>
+  <br>
    
     <select name="situacao_id" id="situacao_id" style="margin-left: 450px; width:550px;">
     <option disabled selected>Selecione a situação do processo</option>
     <option value="1">RE</option>
     </select>
   </div>
-
-  
-
-
- 
-
-
-
-
-
-
-
-
-
-  
-
-   
-    
-
- 
-   
-
- 
-  
 
 </div>
 <div>
@@ -136,8 +115,15 @@
   <textarea name="" id="" cols="80" rows="15" ></textarea>
   </center>
   </div>
-<button type="button" class="btn btn-success" style="position: absolute; left:89%">Success</button>
+  <div>
+  <button type="submit" class="btn btn-success" style="position: absolute; left:89%">Cadastrar</button>
 </div>
+</form>
+</div>
+<script>
+  $("#cod_processo").mask("99999999");
+
+</script>
 
 </div>
 
