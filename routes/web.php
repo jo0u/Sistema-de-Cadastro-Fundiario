@@ -140,6 +140,7 @@ Route::post('/processos',[ProcessoController::class, 'store'])->middleware('auth
 
 
 
+
 /********************************************************************************************************/
 
 
@@ -151,7 +152,7 @@ Route::get('/livewire/teste',TesteController::class,'render')->middleware('auth'
 Route::get('/livewire/proc-controller',ProcController::class,'render')->middleware('auth');
 
 
-
+Route::post('/teste',[TesteController::class, 'create'])->middleware('auth');
 
 
 Route::get('/home', function () {

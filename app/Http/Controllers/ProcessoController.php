@@ -10,6 +10,7 @@ use App\Models\Situacoes;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
+
 class ProcessoController extends Controller
 {
 
@@ -124,14 +125,8 @@ class ProcessoController extends Controller
     // }
 
 
-    public function updatedselectMunicipio($municipios_id){
-
-        $this->comunidades = Comunidades::where('municipios_id',$municipios_id)->get();
-
-
-        return ['comunidades' => $this->comunidades];
-
-    }
+    
+        
 
     
 

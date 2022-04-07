@@ -1,6 +1,7 @@
 @extends('layouts.main')
 @section('title','Painel de Cadastro')
 @section('content')
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
 
