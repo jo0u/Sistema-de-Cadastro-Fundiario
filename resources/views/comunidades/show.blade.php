@@ -7,17 +7,22 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
 
+
+
+<p>Para voltar a pesquisar <a href="/comunidades/dashboard"> Click aqui</a> </p>
+
 <form action="/comunidades/show" method="GET">
    
 
 <!--<input type="text" id="search" name="search" class="form-control" placeholder="Pesquisa rápida">-->
 
-<label for="exampleDataList" class="form-label">Pesquisar</label>
+<!-- <label for="exampleDataList" class="form-label">Pesquisar</label>
 <input class="form-control" list="datalistOptions" id="search" name="search" placeholder="Pesquise o nome do Comunidade">
-<datalist id="datalistOptions">
-    @foreach($comunidades as $comu)
-  <option value="{{$comu->nome_comunidade}}">
-  @endforeach
+<datalist id="datalistOptions"> -->
+   <!-- @foreach($comunidades as $comu) -->
+  <!-- <option value="{{$comu->nome_comunidade}}"> -->
+  <!-- <option value="{{$comu->nome_comunidade}}"> -->
+  <!-- @endforeach -->
   
 </datalist>
  

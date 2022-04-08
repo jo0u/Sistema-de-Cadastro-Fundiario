@@ -17,7 +17,7 @@
      @error('cod_processo') <span class="text-danger">{{ $message }}</span>@enderror
   </div>
   <div class="col"><label>Municipios</label>
-            <select wire:model="selectedMunicipio" wire:model="municipio_id" class="form-control">
+            <select wire:model="selectedMunicipio" wire:model="municipio_id" id="municipio_id" name="municipio_id" class="form-control">
                 <option value ="0" >== Municipios ==</option>
                 @foreach($municipios as $municipios)
                 <option value="{{$municipios->id}}">{{$municipios->nome_municipio}}</option>
@@ -29,7 +29,7 @@
 
 
 <label>Comunidades</label>
-<select wire:model="selectedComunidade" wire:model="comunidade_id" class="form-control">
+<select wire:model="selectedComunidade" wire:model="comunidade_id" id="comunidade_id" name="comunidade_id" class="form-control">
     <option value ="" >== Comunidades ==</option>
     @foreach($comunidades as $comunidades)
     <option value="{{$comunidades->id}}">{{$comunidades->nome_comunidade}}</option>
@@ -115,7 +115,7 @@
       <br>
       <label for="">Observações</label>
       <br>
-  <textarea name="observacao" id="observacao" wire:model="observacoes" cols="80" rows="15" ></textarea>
+  <textarea name="observacoes" id="observacoes" wire:model="observacoes" cols="80" rows="15" ></textarea>
   </center>
   </div>
   <button type="submit" name="cadastrar" class="btn btn-success" style="margin-bottom: 10px;">Cadastrar</button> 

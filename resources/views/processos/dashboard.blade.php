@@ -40,7 +40,7 @@
 @foreach($processos as $p)
 
 
-<tr><th>{{$p->cod_processo}}</th><th>{{$p->requerente->nome}}</th> <th> {{$p->situacao->cod_situacao}}</th> <th>{{$p->requerente->cpf}}</th></tr>
+<tr><th>{{$p->cod_processo}}</th><th>{{$p->requerente->nome}}</th> <th> {{$p->situacao->cod_situacao}}</th> <th>{{$p->requerente->cpf}}</th><th><th><a href="/processos/edit/{{$p->id}}"> <button>Editar  </button> </a></th></th></tr>
 
 
 

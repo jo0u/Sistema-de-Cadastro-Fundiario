@@ -13,13 +13,13 @@ class ComunidadeController extends Controller
         
         if($search):
             $comunidades = Comunidades::where([
-                ['nome_comunidade', 'like',"%".($search)."%"]
+                ['municipios_id', 'like',"%".($search)."%"]
             ])->get();
             else:
                 $comunidades = Comunidades::all();
             endif;
                    
-                    $comunidades = Comunidades::paginate(100);
+                    $comunidades = Comunidades::paginate(15000);
         return view('/comunidades/dashboard',['comunidades' => $comunidades]);
     }
 
@@ -29,7 +29,7 @@ class ComunidadeController extends Controller
         
         if($search):
             $comunidades = Comunidades::where([
-                ['nome_comunidade', 'like',"%".($search)."%"]
+                ['municipios_id', 'like',"%".($search)."%"]
             ])->get();
             else:
                 $comunidades = Comunidades::all();

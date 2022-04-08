@@ -17,7 +17,7 @@
 <input class="form-control" list="datalistOptions" id="search" name="search" placeholder="Pesquise o nome do Comunidade">
 <datalist id="datalistOptions">
     @foreach($comunidades as $comu)
-  <option value="{{$comu->nome_comunidade}}">
+  <option value="{{$comu->municipios_id}}">{{$comu->municipios->nome_municipio}}</option>
   @endforeach
   
 </datalist>
@@ -31,11 +31,9 @@
 <a href="/comunidades/cadastrar" class="btn-floating btn-large waves-effect waves-light green" style="margin-left:50px;"><i class="material-icons" >add</i></a>
 
 
-<a href="/comunidades/show" class="btn-floating btn-large waves-effect waves-white green" style="margin-left:50px;"><i class="material-icons">search</i></a>
-
 
 <div class="card-panel">
-<br><br><table border="1px"><tbody><tr> <th> Municipio </th> <th> Nome da Comunidade </th><th> <th>Ações </th></tr>
+<!-- <br><br><table border="1px"><tbody><tr> <th> Municipio </th> <th> Nome da Comunidade </th><th> <th>Ações </th></tr>
 
 @foreach($comunidades as $c)
 
@@ -78,7 +76,7 @@
   }
  
 
-</style>
+</style> 
 
 
 @endsection
