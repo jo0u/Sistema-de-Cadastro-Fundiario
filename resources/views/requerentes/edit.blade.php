@@ -156,13 +156,14 @@
 
 
 <div id="containerCasado" class="card" style="display: block; margin-top: 15px;" >
-
-
+<center>
+<h3>Dados do conjugue</h3>
+</center>
 <div class="w-100"></div>
 <div class="col"> 
 <label for="">Nome do Conjugue</label>    
 <input type="text" class="form-control" aria-label="Sizing example input" id="nome_conjugue" name="nome_conjugue" aria-describedby="inputGroup-sizing-sm" value="{{$requerentes->nome_conjugue}}"></div>
-    <div class="col">
+    <div class="col"><br>
     
     <div class="col"><label for="">CPF</label>    
 <input type="text" class="form-control" aria-label="Sizing example input" id="cpf_conjugue" name="cpf_conjugue" aria-describedby="inputGroup-sizing-sm" value="{{$requerentes->cpf_conjugue}}"></div>
@@ -170,10 +171,13 @@
 </div>
 
 <div class="w-100"></div>
-<div> <label>RG</div>
-    <div class="col"><input type="text" class="form-control" id="rg_conjugue" name="rg_conjugue" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" value="{{$requerentes->rg_conjugue}}"></div>
+<div><br> <label>RG</div>
+    <div class="col">
+        <input type="text" class="form-control" id="rg_conjugue" name="rg_conjugue" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" value="{{$requerentes->rg_conjugue}}"></div>
     <div class="col"><br>
+    <label for="">Estado</label>
      <select class="form-select form-select-sm" id="estado_conjugue" name="estado_conjugue" aria-label=".form-select-sm example">
+        
      <option value="{{$requerentes->estado_conjugue}}"disabled="" selected="">{{$requerentes->estado}}</option>
       <option value="AC">Acre</option>
     <option value="AL">Alagoas</option>
@@ -204,6 +208,7 @@
     <option value="TO">Tocantins</option>
     </select>
     </select>
+    <br>
 </div>
 
 
@@ -234,12 +239,17 @@
         containerCasado.style.display = "block";
             }else{
                 containerCasado.style.display = "block";
+                
             }
             
 
            }else{
                
             containerCasado.style.display = "none";
+            document.getElementById('cpf_conjugue').value='';
+            document.getElementById('nome_conjugue').value='';
+            document.getElementById('rg_conjugue').value='';
+            document.getElementById('estado_conjugue').value='';
            }
 
     }
@@ -253,7 +263,7 @@
 $("#telefone").mask("(99) 99999-9999");
 
 $("#cpfz").mask("999.999.999-99");
-
+$("#cpf_conjugue").mask("999.999.999-99");
 
 </script>
 

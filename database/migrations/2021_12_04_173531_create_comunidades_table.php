@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddMunicipiosIdToComunidadesTable extends Migration
+class CreateComunidadesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,12 @@ class AddMunicipiosIdToComunidadesTable extends Migration
      */
     public function up()
     {
-        Schema::table('comunidades', function (Blueprint $table) {
-        
+        Schema::create('comunidades', function (Blueprint $table) {
+            $table->id();
+            $table->string('nome_comunidade');
             $table->unsignedBigInteger('municipios_id');
             $table->foreign('municipios_id')->references('geocodigo')->on('municipios');
-
+            $table->timestamps();
         });
     }
 
@@ -28,8 +29,6 @@ class AddMunicipiosIdToComunidadesTable extends Migration
      */
     public function down()
     {
-        Schema::table('comunidades', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('comunidades');
     }
 }
