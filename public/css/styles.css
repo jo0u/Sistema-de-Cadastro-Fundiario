@@ -1,0 +1,60 @@
+
+.dropdown-content ,.navbar{
+    COLOR: whitesmoke;
+    background-color:#353E48;
+    background: white;
+    margin-left: 10px;
+
+}
+
+.nav-item{
+    float: left;
+}
+
+
+
+
+.btn{
+    float: right;
+    margin-top: 25px;
+}
+
+
+/*
+footer{
+    text-align: center;
+    background: #353E48;
+    COLOR: #fff;
+    padding:30px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+ }
+ 
+ footer p{
+    margin-bottom: 0;
+   
+ }
+*/
+ .form-select{
+     height: 39px;
+ }
+ .a input {
+    display: block;
+    }
+
+.msg{
+    background-color:#D4EDDA;
+    color:#155724;
+    border: 1px solid #C3E6CB;
+    width: 100%;
+    margin-bottom:0 ;
+    text-align: center;
+    padding:10px;
+}
+
+.container-grid{
+    padding: 30px;
+
+}
+ 

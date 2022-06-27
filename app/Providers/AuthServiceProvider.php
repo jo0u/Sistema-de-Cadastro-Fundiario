@@ -1,0 +1,49 @@
+<?php
+
+namespace App\Providers;
+
+use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
+use Illuminate\Support\Facades\Gate;
+
+class AuthServiceProvider extends ServiceProvider
+{
+    /**
+     * The policy mappings for the application.
+     *
+     * @var array
+     */
+    protected $policies = [
+        // 'App\Models\Model' => 'App\Policies\ModelPolicy',
+    ];
+
+    /**
+     * Register any authentication / authorization services.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        $this->registerPolicies();
+
+        Gate::define('admlv1', function($users){
+            return $users->admin
+            ?true
+            :false;
+
+        });
+
+        Gate::define('admlv2', function($users){
+            return $users->admin == '2'
+            ?true
+            :false;
+
+        });
+
+        Gate::define('admlv3', function($users){
+            return $users->admin == '3'
+            ?true
+            :false;
+
+        });
+    }
+}

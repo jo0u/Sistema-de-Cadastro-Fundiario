@@ -1,0 +1,228 @@
+@extends('layouts.main')
+@section('title','Painel de Cadastro')
+@section('content')
+<form action="/requerente/cadastrar" method="POST" id="formulario">
+
+
+
+
+<div class="input-field col s6">
+    <input id="cpf" type="text" name="cpf" class="validate invalid" maxlength="14" required="">
+          <label for="last_name" class="">CPF</label>
+
+</div>
+     
+<div class="input-field col s6">
+
+<div class="select-wrapper"><input class="select-dropdown dropdown-trigger" type="text" readonly="true" data-target="select-options-58567368-c52d-9734-818d-6e689a158b8a"><ul id="select-options-58567368-c52d-9734-818d-6e689a158b8a" class="dropdown-content select-dropdown" tabindex="0"><li class="disabled selected" id="select-options-58567368-c52d-9734-818d-6e689a158b8a0" tabindex="0"><span>Pessoa</span></li><li id="select-options-58567368-c52d-9734-818d-6e689a158b8a1" tabindex="0"><span>Fisica</span></li><li id="select-options-58567368-c52d-9734-818d-6e689a158b8a2" tabindex="0"><span>Juridico</span></li></ul><svg class="caret" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><select name="pessoa" required="" tabindex="-1">
+      <option value="" disabled="" selected="">Pessoa</option>
+      <option value="F">Fisica</option>
+      <option value="J">Juridico</option>
+    </select></div>
+
+
+</div>
+
+
+
+<div class="input-field col s6">
+    <input id="nome" type="text" name="nome" class="validate" required="">
+          <label for="last_name">Requerente</label>      
+</div>
+
+<div class="input-field col s6">
+
+<div class="select-wrapper"><input class="select-dropdown dropdown-trigger" type="text" readonly="true" data-target="select-options-79667697-dbc3-8e96-a1b5-9b163fff5503"><ul id="select-options-79667697-dbc3-8e96-a1b5-9b163fff5503" class="dropdown-content select-dropdown" tabindex="0"><li class="disabled selected" id="select-options-79667697-dbc3-8e96-a1b5-9b163fff55030" tabindex="0"><span>Sexo</span></li><li id="select-options-79667697-dbc3-8e96-a1b5-9b163fff55031" tabindex="0"><span>Masculino</span></li><li id="select-options-79667697-dbc3-8e96-a1b5-9b163fff55032" tabindex="0"><span>Feminino</span></li></ul><svg class="caret" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><select name="sexo" required="" tabindex="-1">
+      <option value="" disabled="" selected="">Sexo</option>
+      <option value="M">Masculino</option>
+      <option value="F">Feminino</option>
+    </select></div>
+</div>
+
+
+
+
+
+
+<div class="input-field col s6">
+    <input id="profissao" type="text" name="profissao" class="validate" required="">
+          <label for="last_name">Profissão</label>
+
+</div>
+
+<div class="input-field col s6">
+    <input id="data" type="date" name="data" class="validate" required="">
+          <label>Data de Nascimento</label>      
+</div>
+
+
+<div class="input-field col s6">
+    <input id="" type="text" name="nacionalidade" class="validate" required="">
+          <label for="last_name">Nacionalidade</label>      
+</div>
+
+<div class="input-field col s6">
+    <input id="" type="text" name="nmSocial" class="validate">
+          <label for="last_name">Nome Social</label>      
+</div>
+
+<div class="input-field col s6">
+    <input id="" type="text" name="rg" class="validate" required=""> 
+          <label for="last_name">RG</label>      
+</div>
+
+
+<div class="input-field col s6">
+<div class="select-wrapper"><input class="select-dropdown dropdown-trigger" type="text" readonly="true" data-target="select-options-997962f2-a18a-b4f5-c379-19a7795a6398"><ul id="select-options-997962f2-a18a-b4f5-c379-19a7795a6398" class="dropdown-content select-dropdown" tabindex="0"><li class="disabled selected" id="select-options-997962f2-a18a-b4f5-c379-19a7795a63980" tabindex="0"><span>Selecione o Estado</span></li><li id="select-options-997962f2-a18a-b4f5-c379-19a7795a63981" tabindex="0"><span>Acre</span></li><li id="select-options-997962f2-a18a-b4f5-c379-19a7795a63982" tabindex="0"><span>Alagoas</span></li><li id="select-options-997962f2-a18a-b4f5-c379-19a7795a63983" tabindex="0"><span>Amapá</span></li><li id="select-options-997962f2-a18a-b4f5-c379-19a7795a63984" tabindex="0"><span>Amazonas</span></li><li id="select-options-997962f2-a18a-b4f5-c379-19a7795a63985" tabindex="0"><span>Bahia</span></li><li id="select-options-997962f2-a18a-b4f5-c379-19a7795a63986" tabindex="0"><span>Ceará</span></li><li id="select-options-997962f2-a18a-b4f5-c379-19a7795a63987" tabindex="0"><span>Distrito Federal</span></li><li id="select-options-997962f2-a18a-b4f5-c379-19a7795a63988" tabindex="0"><span>Espirito Santo</span></li><li id="select-options-997962f2-a18a-b4f5-c379-19a7795a63989" tabindex="0"><span>Goiás</span></li><li id="select-options-997962f2-a18a-b4f5-c379-19a7795a639810" tabindex="0"><span>Maranhão</span></li><li id="select-options-997962f2-a18a-b4f5-c379-19a7795a639811" tabindex="0"><span>Mato Grosso do Sul</span></li><li id="select-options-997962f2-a18a-b4f5-c379-19a7795a639812" tabindex="0"><span>Mato Grosso</span></li><li id="select-options-997962f2-a18a-b4f5-c379-19a7795a639813" tabindex="0"><span>Minas Gerais</span></li><li id="select-options-997962f2-a18a-b4f5-c379-19a7795a639814" tabindex="0"><span>Pará</span></li><li id="select-options-997962f2-a18a-b4f5-c379-19a7795a639815" tabindex="0"><span>Paraíba</span></li><li id="select-options-997962f2-a18a-b4f5-c379-19a7795a639816" tabindex="0"><span>Paraná</span></li><li id="select-options-997962f2-a18a-b4f5-c379-19a7795a639817" tabindex="0"><span>Pernambuco</span></li><li id="select-options-997962f2-a18a-b4f5-c379-19a7795a639818" tabindex="0"><span>Piauí</span></li><li id="select-options-997962f2-a18a-b4f5-c379-19a7795a639819" tabindex="0"><span>Rio de Janeiro</span></li><li id="select-options-997962f2-a18a-b4f5-c379-19a7795a639820" tabindex="0"><span>Rio Grande do Norte</span></li><li id="select-options-997962f2-a18a-b4f5-c379-19a7795a639821" tabindex="0"><span>Rio Grande do Sul</span></li><li id="select-options-997962f2-a18a-b4f5-c379-19a7795a639822" tabindex="0"><span>Rondônia</span></li><li id="select-options-997962f2-a18a-b4f5-c379-19a7795a639823" tabindex="0"><span>Roraima</span></li><li id="select-options-997962f2-a18a-b4f5-c379-19a7795a639824" tabindex="0"><span>Santa Catarina</span></li><li id="select-options-997962f2-a18a-b4f5-c379-19a7795a639825" tabindex="0"><span>São Paulo</span></li><li id="select-options-997962f2-a18a-b4f5-c379-19a7795a639826" tabindex="0"><span>Sergipe</span></li><li id="select-options-997962f2-a18a-b4f5-c379-19a7795a639827" tabindex="0"><span>Tocantins</span></li></ul><svg class="caret" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><select name="estado" required="" tabindex="-1">
+      <option value="" disabled="" selected="">Selecione o Estado</option>
+      <option value="AC">Acre</option>
+    <option value="AL">Alagoas</option>
+    <option value="AP">Amapá</option>
+    <option value="AM">Amazonas</option>
+    <option value="BA">Bahia</option>
+    <option value="CE">Ceará</option>
+    <option value="DF">Distrito Federal</option>
+    <option value="ES">Espirito Santo</option>
+    <option value="GO">Goiás</option>
+    <option value="MA">Maranhão</option>
+    <option value="MS">Mato Grosso do Sul</option>
+    <option value="MT">Mato Grosso</option>
+    <option value="MG">Minas Gerais</option>
+    <option value="PA">Pará</option>
+    <option value="PB">Paraíba</option>
+    <option value="PR">Paraná</option>
+    <option value="PE">Pernambuco</option>
+    <option value="PI">Piauí</option>
+    <option value="RJ">Rio de Janeiro</option>
+    <option value="RN">Rio Grande do Norte</option>
+    <option value="RS">Rio Grande do Sul</option>
+    <option value="RO">Rondônia</option>
+    <option value="RR">Roraima</option>
+    <option value="SC">Santa Catarina</option>
+    <option value="SP">São Paulo</option>
+    <option value="SE">Sergipe</option>
+    <option value="TO">Tocantins</option>
+    </select></div>
+    </div>
+
+
+    <div class="input-field col s6">
+    <input id="telefone" type="text" name="telefone" class="validate" maxlength="15" required="">
+          <label for="last_name">Telefone</label>   
+
+    </div>
+
+    <div class="input-field col s6">
+<div class="select-wrapper"><input class="select-dropdown dropdown-trigger" type="text" readonly="true" data-target="select-options-f9e529a3-fae8-a4c4-f451-013fdaca116b"><ul id="select-options-f9e529a3-fae8-a4c4-f451-013fdaca116b" class="dropdown-content select-dropdown" tabindex="0"><li class="disabled selected" id="select-options-f9e529a3-fae8-a4c4-f451-013fdaca116b0" tabindex="0"><span>Est.Civil</span></li><li id="select-options-f9e529a3-fae8-a4c4-f451-013fdaca116b1" tabindex="0"><span>Solteiro(a)</span></li><li id="select-options-f9e529a3-fae8-a4c4-f451-013fdaca116b2" tabindex="0"><span>Casado(a)</span></li><li id="select-options-f9e529a3-fae8-a4c4-f451-013fdaca116b3" tabindex="0"><span>Divorciado(a)</span></li><li id="select-options-f9e529a3-fae8-a4c4-f451-013fdaca116b4" tabindex="0"><span>União Estavél </span></li><li id="select-options-f9e529a3-fae8-a4c4-f451-013fdaca116b5" tabindex="0"><span>Viúvo(a)</span></li></ul><svg class="caret" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><select name="estCivil" id="list" onchange="getSelectValue();" required="" tabindex="-1">
+      <option value="" disabled="" selected="">Est.Civil</option>
+      <option value="Solteiro">Solteiro(a)</option>
+    <option value="Casado">Casado(a)</option>
+    <option value="Divorciado">Divorciado(a)</option>
+    <option value="União Estavel">União Estavél </option>
+    <option value="Viuvo">Viúvo(a)</option>
+   
+</select></div>
+</div>
+
+    <div class="input-field col s6">
+    <input id="nomePai" type="text" name="nomePai" class="validate" required="">
+          <label for="last_name">Nome do Pai</label>      
+</div>
+
+
+<div class="input-field col s6">
+    <input id="nomeMae" type="text" name="nomeMae" class="validate" required="">
+          <label for="last_name">Nome da Mãe</label>      
+</div>
+
+
+<div class="input-field col s6">
+    <input id="" type="text" name="endereco" class="validate" required="">
+          <label for="last_name">Endereço</label>      
+</div>
+
+
+<div class="input-field col s6">
+    <input id="" type="email" name="email" class="validate" required="">
+          <label for="last_name">E-mail</label>      
+</div>
+
+
+
+
+
+
+<div id="container" class="card-panel" style="display: none;">
+
+
+
+<div class="input-field col s6">
+    <input id="nomeConjugue" type="text" name="nomeConjugue" class="validate">
+          <label for="last_name">Nome do Cônjugue</label>      
+</div>
+
+<div class="input-field col s6">
+    <input id="cpfConjugue" type="text" name="cpfConjugue" class="validate">
+          <label for="last_name">CPF</label>
+
+</div>
+
+<div class="input-field col s6">
+    <input id="" type="text" name="rgConjugue" class="validate"> 
+          <label for="last_name">RG</label>      
+</div>
+
+
+<div class="input-field col s6">
+<div class="select-wrapper"><input class="select-dropdown dropdown-trigger" type="text" readonly="true" data-target="select-options-d31b682a-b367-5ca2-298c-9d57ae2de4e7"><ul id="select-options-d31b682a-b367-5ca2-298c-9d57ae2de4e7" class="dropdown-content select-dropdown" tabindex="0"><li id="select-options-d31b682a-b367-5ca2-298c-9d57ae2de4e70" tabindex="0" class="selected"><span>Selecione o Estado</span></li><li id="select-options-d31b682a-b367-5ca2-298c-9d57ae2de4e71" tabindex="0"><span>Acre</span></li><li id="select-options-d31b682a-b367-5ca2-298c-9d57ae2de4e72" tabindex="0"><span>Alagoas</span></li><li id="select-options-d31b682a-b367-5ca2-298c-9d57ae2de4e73" tabindex="0"><span>Amapá</span></li><li id="select-options-d31b682a-b367-5ca2-298c-9d57ae2de4e74" tabindex="0"><span>Amazonas</span></li><li id="select-options-d31b682a-b367-5ca2-298c-9d57ae2de4e75" tabindex="0"><span>Bahia</span></li><li id="select-options-d31b682a-b367-5ca2-298c-9d57ae2de4e76" tabindex="0"><span>Ceará</span></li><li id="select-options-d31b682a-b367-5ca2-298c-9d57ae2de4e77" tabindex="0"><span>Distrito Federal</span></li><li id="select-options-d31b682a-b367-5ca2-298c-9d57ae2de4e78" tabindex="0"><span>Espirito Santo</span></li><li id="select-options-d31b682a-b367-5ca2-298c-9d57ae2de4e79" tabindex="0"><span>Goiás</span></li><li id="select-options-d31b682a-b367-5ca2-298c-9d57ae2de4e710" tabindex="0"><span>Maranhão</span></li><li id="select-options-d31b682a-b367-5ca2-298c-9d57ae2de4e711" tabindex="0"><span>Mato Grosso do Sul</span></li><li id="select-options-d31b682a-b367-5ca2-298c-9d57ae2de4e712" tabindex="0"><span>Mato Grosso</span></li><li id="select-options-d31b682a-b367-5ca2-298c-9d57ae2de4e713" tabindex="0"><span>Minas Gerais</span></li><li id="select-options-d31b682a-b367-5ca2-298c-9d57ae2de4e714" tabindex="0"><span>Pará</span></li><li id="select-options-d31b682a-b367-5ca2-298c-9d57ae2de4e715" tabindex="0"><span>Paraíba</span></li><li id="select-options-d31b682a-b367-5ca2-298c-9d57ae2de4e716" tabindex="0"><span>Paraná</span></li><li id="select-options-d31b682a-b367-5ca2-298c-9d57ae2de4e717" tabindex="0"><span>Pernambuco</span></li><li id="select-options-d31b682a-b367-5ca2-298c-9d57ae2de4e718" tabindex="0"><span>Piauí</span></li><li id="select-options-d31b682a-b367-5ca2-298c-9d57ae2de4e719" tabindex="0"><span>Rio de Janeiro</span></li><li id="select-options-d31b682a-b367-5ca2-298c-9d57ae2de4e720" tabindex="0"><span>Rio Grande do Norte</span></li><li id="select-options-d31b682a-b367-5ca2-298c-9d57ae2de4e721" tabindex="0"><span>Rio Grande do Sul</span></li><li id="select-options-d31b682a-b367-5ca2-298c-9d57ae2de4e722" tabindex="0"><span>Rondônia</span></li><li id="select-options-d31b682a-b367-5ca2-298c-9d57ae2de4e723" tabindex="0"><span>Roraima</span></li><li id="select-options-d31b682a-b367-5ca2-298c-9d57ae2de4e724" tabindex="0"><span>Santa Catarina</span></li><li id="select-options-d31b682a-b367-5ca2-298c-9d57ae2de4e725" tabindex="0"><span>São Paulo</span></li><li id="select-options-d31b682a-b367-5ca2-298c-9d57ae2de4e726" tabindex="0"><span>Sergipe</span></li><li id="select-options-d31b682a-b367-5ca2-298c-9d57ae2de4e727" tabindex="0"><span>Tocantins</span></li></ul><svg class="caret" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><select name="estadoConjugue" tabindex="-1">
+      <option value="">Selecione o Estado</option>
+      <option value="AC">Acre</option>
+    <option value="AL">Alagoas</option>
+    <option value="AP">Amapá</option>
+    <option value="AM">Amazonas</option>
+    <option value="BA">Bahia</option>
+    <option value="CE">Ceará</option>
+    <option value="DF">Distrito Federal</option>
+    <option value="ES">Espirito Santo</option>
+    <option value="GO">Goiás</option>
+    <option value="MA">Maranhão</option>
+    <option value="MS">Mato Grosso do Sul</option>
+    <option value="MT">Mato Grosso</option>
+    <option value="MG">Minas Gerais</option>
+    <option value="PA">Pará</option>
+    <option value="PB">Paraíba</option>
+    <option value="PR">Paraná</option>
+    <option value="PE">Pernambuco</option>
+    <option value="PI">Piauí</option>
+    <option value="RJ">Rio de Janeiro</option>
+    <option value="RN">Rio Grande do Norte</option>
+    <option value="RS">Rio Grande do Sul</option>
+    <option value="RO">Rondônia</option>
+    <option value="RR">Roraima</option>
+    <option value="SC">Santa Catarina</option>
+    <option value="SP">São Paulo</option>
+    <option value="SE">Sergipe</option>
+    <option value="TO">Tocantins</option>
+    </select></div>
+    </div>
+
+
+
+
+    
+
+
+
+
+
+</div>
+
+
+<button name="cadastrar" class="waves-effect waves-light btn modal-trigger green" style="float:right"> Cadastrar</button>
+
+
+</form>
+
+<script src="/js/cadastrarRequerente.js"></script>
+
+@endsection
